@@ -7,7 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Artwork.destroy_all
 
-User.create!(name: 'Jay', email: 'misterjustincox@gmail.com')
-User.create!(name: 'Dean', email: 'xoxAnimeWeedLord6969xox@hotmail.com')
-User.create!(name: 'Keith', email: 'kfb@gmail.com')
+
+jay = User.create!(username: 'JayOneTheSk8')
+keith = User.create!(username: 'fakesim')
+picasso = User.create!(username: 'mi_amore1881')
+michael = User.create!(username: 'Sistine_prEtTy')
+van_gogh = User.create!(username: 'wheres_my_ear')
+
+
+# artworks
+a1 = Artwork.create!(title: 'Woman with Yellow Hat', image_url: 'https://uploads7.wikiart.org/images/pablo-picasso/woman-with-yellow-hat-jacqueline.jpg')
