@@ -12,6 +12,10 @@
 
 class Artwork < ApplicationRecord
 
+  validates :title, uniqueness: { scope: :artist_id,
+    message: "You cannot upload artwork with the same title." }
+  validates :image_url, :title, presence: true
+
   has_many :artwork_shares,
     foreign_key: :artwork_id,
     class_name: :ArtworkShare

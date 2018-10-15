@@ -11,7 +11,8 @@
 
 
 class User < ApplicationRecord
-  validates :name, :email, uniqueness: true
+
+  validates :username, presence: true
 
   # Viewer
   has_many :artwork_shares,
